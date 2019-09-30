@@ -1,0 +1,232 @@
+@media only screen and (max-width: 1024px) {
+  .containerSettings {
+    min-width: auto;
+    width: auto;
+    margin: .2rem;
+    border: none;
+    padding: .5rem 3rem;
+
+    h1 {
+      margin: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .userSettings {
+      flex-direction: column;
+      padding: 0;
+
+      .avatar {
+        margin: 1.2rem auto 2rem;
+
+        .userAvatar {
+          margin-right: 0;
+          width: 17rem;
+          height: 17rem;
+
+          .uploadAvatar {
+            line-height: 17rem;
+            font-size: 0;
+
+            &:hover,
+            &:active {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+
+      .userInfo {
+        .userSettingsField {
+          div {
+            margin: .7rem 0;
+          }
+
+          .recieveEmailsCheckbox {
+            margin: 1.3rem 0;
+            display: inline-block;
+            vertical-align: baseline;
+
+            .checkmark {
+              height: 1.5rem;
+              width: 1.5rem;
+              margin-left: 1rem;
+              border-radius: 50%;
+            }
+
+            input:checked ~ .checkmark {
+              background-color: white !important;
+              border: .35rem solid #2196F3;
+            }
+
+            input:checked ~ .checkmark:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  .containerGallery {
+    min-width: auto;
+    background-color: white;
+    width: 100%;
+    min-width: 20rem;
+    border:none;
+    padding: 0;
+    margin: 0;
+
+
+    header {
+      display: block; 
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+
+      .profile-avatar {
+        overflow: hidden;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,.2);
+        margin: 0 auto 2rem;
+      }
+
+      .profile-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .profile-name-settings {
+
+          .profile-name {
+            font-size: 32px;
+            vertical-align: middle;
+          }
+
+          * {
+            display: block;
+            margin: .5rem auto .5rem;
+            text-align: center;
+          }
+
+          .follow-btn {
+            border-radius: 5px;
+            font-size: 12px;
+            padding: .5rem 1rem;
+            background-color: #3897f0;
+            color: #fff;
+            transition: background-color 0.3s;
+
+            &:hover {
+              transition: background-color 0.3s;
+              background-color: #67b0f4;  
+            }
+
+            &:active {
+              transition: background-color 0.3s;
+              background-color: #117ee4;
+            }
+          }
+        }
+
+        .profile-stats {
+          margin: auto;
+
+          ul {
+            margin: 0;
+            li {
+              font-size: 16px;
+              display: inline-block;
+              margin: .5rem 1rem .5rem 0;
+            }
+          }
+        }
+
+        .profile-bio {
+          margin: auto;
+
+          * {
+            text-align: center;
+            margin: 0;
+          }
+          .profile-real-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    main {
+      .gallery {
+        background-color: white;
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-width: 300px;
+
+        .gallery-item {
+          cursor: pointer;
+          position: relative;
+          min-width: 300px;
+          width: 100%;
+          height: 0;
+          overflow: hidden;
+          padding-bottom: 100%;
+          margin-top: 1rem;
+          border: 1px solid rgba(0,0,0,.1);
+
+          img {
+            position: absolute;
+            width: 100%;
+            min-width: 300px;
+            height: 100%;
+            object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+            object-position: center;
+          }
+
+          &:hover .gallery-item-info {
+            background-color: rgba(0,0,0,.3);
+            display: block;
+          }
+
+          .gallery-item-info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: none;
+            z-index: 1;
+
+
+            ul {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+
+              li {
+                overflow: visible;
+                display: inline-block;
+                margin: .3rem;
+                font-size: 16px;
+                color: rgba(255,255,255, .9);
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }    
+    }
+  }
+}

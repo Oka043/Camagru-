@@ -1,0 +1,12 @@
+{
+    "name": "olaktion/htdocs",
+    "authors": [
+        {
+            "name": "hifhjds hjfdsk jdsh",
+            "email": "fewjfjewo@kffferger.ua"
+        }
+    ],
+    "require": {
+    	"digitalnature/php-ref": "dev-master"
+    }
+}

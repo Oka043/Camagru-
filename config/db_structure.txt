@@ -1,0 +1,41 @@
+users => 
+		user_id, 	(Автоинкримент)
+		image_id, 	(id аватара, поиск по картинкам)
+		login, 		(Логин при регистрации)
+		email,
+		password, 	(Пароль)
+		last_name, 	(Фамилия)
+		first_name, (Имя)
+		gender, 	(Пол)
+		signup_token,
+		password_token,
+		active, 	(Онлайн ли сейчас пользователь)
+		bio			(Био, сперва пусто, меняется при заходе в настройки)
+
+
+followers =>
+		follow_id, 			(Автоинкримент)
+		user_id_followed, 	(тот, на кого подписались)
+		user_id_follower	(тот, кто подписался)
+
+
+images =>
+		image_id,	(Автоинкримент)
+		user_id,	(автор фото)
+		path,		(путь к фото)
+		desc,		(описание)
+		date		(дата добавления)
+
+
+comments =>
+		comment_id,	(Автоинкримент)
+		user_id,	(юзер который оставил комментарий)
+		image_id, 	(какой картинке комментарий)
+		comment,	(сам комментарий)
+		date		(дата комментария)
+
+
+likes =>
+		like_id,	(Автоинкримент)
+		user_id,	(кто лайкнул)
+		image_id	(какую фотку лайкнул)

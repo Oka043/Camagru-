@@ -1,0 +1,957 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/icons/fontello.eot?68401916');
+  src: url('../fonts/icons/fontello.eot?68401916#iefix') format('embedded-opentype'), url('../fonts/icons/fontello.woff?68401916') format('woff'), url('../fonts/icons/fontello.ttf?68401916') format('truetype'), url('../fonts/icons/fontello.svg?68401916#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 0;
+  padding-bottom: 3rem;
+}
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+* {
+  text-decoration: none;
+  font-family: fontello, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*:active,
+*:focus,
+*.active,
+*:active:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+}
+b {
+  font-weight: bold;
+}
+button {
+  border: none;
+  color: #3897f0;
+  font-weight: bold;
+}
+a {
+  cursor: pointer;
+}
+.containerSettings {
+  min-width: 30rem;
+  max-width: 73rem;
+  background-color: white;
+  width: 70%;
+  margin: 5rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+.containerSettings h1 {
+  font-size: 2rem;
+  margin: .5rem 0;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: .5rem;
+}
+.containerSettings .userSettings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem 0;
+}
+.containerSettings .userSettings .avatar {
+  text-align: -webkit-center;
+}
+.containerSettings .userSettings .avatar .userAvatar {
+  margin-right: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.containerSettings .userSettings .avatar .userAvatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.containerSettings .userSettings .avatar .userAvatar input {
+  display: none;
+}
+.containerSettings .userSettings .avatar .userAvatar .uploadAvatar {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 10;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10rem;
+  font-size: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+.containerSettings .userSettings .avatar .userAvatar .uploadAvatar:active,
+.containerSettings .userSettings .avatar .userAvatar .uploadAvatar:hover {
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+.containerSettings .userSettings .userInfo {
+  width: auto;
+  -webkit-box-flex: 8;
+      -ms-flex-positive: 8;
+          flex-grow: 8;
+}
+.containerSettings .userSettings .userInfo h3 {
+  font-size: 1.2rem;
+}
+.containerSettings .userSettings .userInfo .userSettingsField div {
+  margin: .5rem 0;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox {
+  display: inline-block;
+  position: relative;
+  padding-right: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox input {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox * {
+  vertical-align: bottom;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox .checkmark {
+  display: inline-block;
+  position: relative;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #eee;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: .4rem;
+  height: .8rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox input:checked ~ .checkmark {
+  background-color: #2196F3 !important;
+}
+.containerSettings .userSettings .userInfo .userSettingsField .recieveEmailsCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.containerGallery {
+  min-width: 73rem;
+  max-width: 73rem;
+  background-color: white;
+  width: 70%;
+  margin: 5rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+}
+.containerGallery header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.containerGallery header .profile-avatar {
+  overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-right: 1.5rem;
+}
+.containerGallery header .profile-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.containerGallery header .profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.containerGallery header .profile-info .profile-name-settings .profile-name {
+  font-size: 32px;
+  vertical-align: middle;
+}
+.containerGallery header .profile-info .profile-name-settings * {
+  margin: 0 1rem 0.4rem 0;
+  display: inline-block;
+}
+.containerGallery header .profile-info .profile-name-settings .follow-btn {
+  border-radius: 5px;
+  font-size: 12px;
+  padding: .5rem 1rem;
+  background-color: #3897f0;
+  color: #fff;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.containerGallery header .profile-info .profile-name-settings .follow-btn:hover {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #67b0f4;
+}
+.containerGallery header .profile-info .profile-name-settings .follow-btn:active {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #117ee4;
+}
+.containerGallery header .profile-info .profile-stats ul li {
+  font-size: 16px;
+  display: inline-block;
+  margin: .5rem 1rem .5rem 0;
+}
+.containerGallery header .profile-info .profile-bio .profile-real-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin: .5rem 1rem .5rem 0;
+}
+.containerGallery main .gallery {
+  background-color: white;
+  padding-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.containerGallery main .gallery .gallery-item {
+  cursor: pointer;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.containerGallery main .gallery .gallery-item .closeButton {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #fd5756;
+  border: 1px solid #c92230;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  right: .5rem;
+  top: .5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.containerGallery main .gallery .gallery-item .closeButton:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.containerGallery main .gallery .gallery-item .closeButton:before,
+.containerGallery main .gallery .gallery-item .closeButton:after {
+  position: absolute;
+  content: ' ';
+  height: 1rem;
+  width: 2px;
+  background-color: #c92230;
+}
+.containerGallery main .gallery .gallery-item .closeButton:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.containerGallery main .gallery .gallery-item .closeButton:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.containerGallery main .gallery .gallery-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Equivalent of the background-size: cover; of a background-image */
+  -o-object-position: center;
+     object-position: center;
+}
+.containerGallery main .gallery .gallery-item:hover .gallery-item-info {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+}
+.containerGallery main .gallery .gallery-item .gallery-item-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 1;
+}
+.containerGallery main .gallery .gallery-item .gallery-item-info ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.containerGallery main .gallery .gallery-item .gallery-item-info ul li {
+  overflow: visible;
+  display: inline-block;
+  margin: .3rem;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+.containerGallery .pagination {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.containerFoto {
+  min-width: 30rem;
+  background-color: white;
+  width: 40%;
+  margin: 5rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
+  transition-property: -webkit-box-shadow, -webkit-transform;
+  transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
+}
+.containerFoto .user-info header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem;
+  border: none;
+}
+.containerFoto .user-info header > div,
+.containerFoto .user-info header .username-container > div {
+  display: inline-block;
+}
+.containerFoto .user-image {
+  position: relative;
+  min-width: 300px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 80%;
+}
+.containerFoto .user-image img {
+  position: absolute;
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Equivalent of the background-size: cover; of a background-image */
+  -o-object-position: center;
+     object-position: center;
+}
+.containerFoto .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 1rem;
+  padding-top: .8rem;
+  padding-bottom: .6rem;
+}
+.containerFoto .footer #like-btn {
+  cursor: pointer;
+}
+.containerFoto .footer .unliked-image {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: url("/public/heart.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.4rem;
+  display: inline-block;
+}
+.containerFoto .footer .unliked-image:hover {
+  background: url("/public/heart_active.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.containerFoto .footer .liked-image {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: url("/public/heart_active.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.4rem;
+  display: inline-block;
+}
+.containerFoto .footer .liked-image:hover {
+  opacity: .8;
+}
+.containerFoto .footer .likes-info {
+  font-weight: bold;
+}
+.containerFoto .footer > * {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+.containerFoto .user-menu {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 1.5rem;
+  color: #999;
+}
+.containerFoto .user-menu .comment-form {
+  width: 100%;
+}
+.containerFoto .user-menu .comment-form .comment-message textarea {
+  min-height: 7rem;
+  padding: 1.2rem 2rem;
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  color: #8f8fa1;
+  line-height: 1.2;
+  outline: none;
+  border: none;
+  resize: vertical;
+}
+.containerFoto .user-menu .comment-form .comment-message textarea:focus {
+  border-color: transparent !important;
+}
+.containerFoto .user-menu .comment-form .leave-comment-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.containerFoto .user-menu .comment-form .leave-comment-btn-container .leave-comment-btn {
+  padding: .6rem;
+  background-color: #3897f0;
+  color: #fff;
+  /*text-transform: uppercase;*/
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
+  width: 100%;
+}
+.containerFoto .user-menu .comment-form .leave-comment-btn-container .leave-comment-btn:hover {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #67b0f4;
+}
+.containerFoto .user-menu .comment-form .leave-comment-btn-container .leave-comment-btn:active {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #117ee4;
+}
+.containerFoto .photo-comments > * {
+  padding: 1rem .8rem;
+}
+.containerFoto .photo-comments ul li > * {
+  display: inline-block;
+  vertical-align: top;
+}
+.containerFoto .photo-comments ul li .message > * {
+  display: block;
+}
+.containerFoto .photo-comments ul > * {
+  margin: .5rem 0 0;
+}
+.containerFoto .photo-comments .message {
+  margin: 0;
+  padding: 0;
+}
+.containerFoto .photo-comments .message span {
+  display: inline-block;
+  padding-top: .2rem;
+  padding-bottom: .5rem;
+}
+.containerFoto .user-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 1.5rem;
+  margin-top: .3rem;
+}
+.containerFoto time {
+  color: #999;
+}
+.containerFoto .user-info-container {
+  margin: auto 0;
+}
+.containerFoto ul {
+  list-style: none;
+}
+.containerFoto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.containerFoto button {
+  border: none;
+  color: #3897f0;
+  font-weight: bold;
+}
+.error_page h2 {
+  color: black;
+  font-size: 4rem;
+  margin: 5rem auto;
+  font-weight: 300;
+  text-align: center;
+}
+.error_page h3 {
+  margin: 5rem auto;
+  font-weight: 300;
+  text-align: center;
+}
+.followContainer {
+  min-width: 30rem;
+  background-color: white;
+  width: 40%;
+  margin: 5rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
+  transition-property: -webkit-box-shadow, -webkit-transform;
+  transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
+}
+.followContainer .header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.followContainer .header .close-btn {
+  float: right;
+  background: url("/public/close.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.4rem;
+  display: inline-block;
+}
+.followContainer .header > * {
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: -webkit-baseline-middle;
+}
+.followContainer .follow-description {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.followContainer .follow-description .user-avatar {
+  overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  float: left;
+  margin-right: 1.5rem;
+}
+.followContainer .follow-description .user-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.followContainer .follow-description .user-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: auto;
+}
+.followContainer .follow-description .user-info .name {
+  color: #999;
+}
+.followContainer .follow-description .follow {
+  float: right;
+}
+.followContainer .follow-description .follow .follow-btn {
+  border-radius: 5px;
+  font-size: 12px;
+  padding: .5rem 1rem;
+  background-color: #3897f0;
+  color: #fff;
+  width: 100%;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.followContainer .follow-description .follow .follow-btn:hover {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #67b0f4;
+}
+.followContainer .follow-description .follow .follow-btn:active {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #117ee4;
+}
+.containerMakePhoto {
+  margin: 5rem auto 3rem;
+  border-collapse: collapse;
+  border: 1px solid #CFCFCF;
+  background-color: white;
+  width: 70%;
+  min-width: 660px;
+  /* width */
+  /* Handle */
+  /* Handle on hover */
+}
+.containerMakePhoto ::-webkit-scrollbar {
+  width: 10px;
+}
+.containerMakePhoto ::-webkit-scrollbar-thumb {
+  background: #67B0F4;
+  border-radius: 2px;
+}
+.containerMakePhoto ::-webkit-scrollbar-thumb:hover {
+  background: #3897f0;
+}
+.containerMakePhoto tr:last-child {
+  width: 300px;
+  max-width: 300px;
+  border-top: 1px solid #CFCFCF;
+}
+.containerMakePhoto tr > *:first-child {
+  width: 640px;
+}
+.containerMakePhoto tr > *:last-child {
+  width: 300px;
+  max-width: 300px;
+  text-align: center;
+}
+.containerMakePhoto tr:first-child {
+  height: 480px;
+  max-height: 480px;
+}
+.containerMakePhoto #field {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 640px;
+  height: 480;
+  margin: 1rem auto;
+  position: relative;
+  overflow: hidden;
+}
+.containerMakePhoto #field video,
+.containerMakePhoto #field canvas {
+  width: 640px;
+  height: 480px;
+}
+.containerMakePhoto #field #stikerImage {
+  position: absolute;
+  width: 250px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+.containerMakePhoto #taken_photos {
+  font-size: 0;
+}
+.containerMakePhoto .buttons_container {
+  font-size: 0;
+  text-align: center;
+}
+.containerMakePhoto .buttons_container #uploadPictureBtn,
+.containerMakePhoto .buttons_container #useCameraBtn,
+.containerMakePhoto .buttons_container #savePictureBtn {
+  position: relative;
+  font: 400 11px system-ui;
+  cursor: pointer;
+  margin: 1rem .2rem;
+  padding: .4rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.containerMakePhoto .buttons_container .savePictureButton:active {
+  -webkit-transition: background-color 0s;
+  transition: background-color 0s;
+  background-color: #8ece31 !important;
+}
+.containerMakePhoto .buttons_container .savePictureButtonBtn:hover {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #a4d85a !important;
+}
+.containerMakePhoto .buttons_container .uploadPictureBtn,
+.containerMakePhoto .buttons_container .useCameraBtn,
+.containerMakePhoto .buttons_container .savePictureBtn {
+  background-color: #3897f0 !important;
+}
+.containerMakePhoto .buttons_container .uploadPictureBtn:active,
+.containerMakePhoto .buttons_container .useCameraBtn:active,
+.containerMakePhoto .buttons_container .savePictureBtn:active {
+  -webkit-transition: background-color 0s;
+  transition: background-color 0s;
+  background-color: #0065b7 !important;
+}
+.containerMakePhoto .buttons_container .uploadPictureBtn:hover,
+.containerMakePhoto .buttons_container .useCameraBtn:hover,
+.containerMakePhoto .buttons_container .savePictureBtn:hover {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #5eb2ff !important;
+}
+.containerMakePhoto .buttons_container .activeBtn {
+  background-color: #3888f0 !important;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) inset;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) inset;
+}
+.containerMakePhoto .buttons_container .invalidBtn {
+  background-color: #feabaa;
+}
+.containerMakePhoto .buttons_container .active {
+  border: 2px solid yellow;
+}
+.containerMakePhoto #availableStikers {
+  position: relative;
+  text-align: center;
+  padding: 0rem 0rem 1rem 1rem;
+  font-size: 0;
+}
+.containerMakePhoto #availableStikers input:last-child {
+  display: none;
+}
+.containerMakePhoto #availableStikers input[type="radio"]:checked {
+  border: 1px solid blue;
+}
+.containerMakePhoto #availableStikers label {
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(209, 227, 211, 0.9);
+  margin: .1rem;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+}
+.containerMakePhoto #availableStikers label img {
+  width: 100%;
+  height: auto;
+}
+.containerMakePhoto #availableStikers label:hover {
+  background-color: #a1c6a6;
+  border-color: #3897f0;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+}
+.containerMakePhoto #descriptionBlock {
+  width: 90%;
+  margin: auto;
+}
+.containerMakePhoto #descriptionBlock b {
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin: .5rem 0;
+}
+.containerMakePhoto #all_photos {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 480px;
+  height: 480px;
+  width: 100%;
+  padding: 0 5px;
+  font-size: 0;
+}
+.containerMakePhoto .stikersContainer {
+  display: inline-block;
+  width: 3.9rem;
+  height: 3.9rem;
+  margin-right: .4rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.containerMakePhoto .stikersContainer .previewStikerImage {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  cursor: pointer;
+  border: 2px solid #CFCFCF;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background-color: rgba(209, 227, 211, 0.5);
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+}
+.containerMakePhoto .stikersContainer .previewStikerImage img {
+  width: 100%;
+  height: auto;
+}
+.containerMakePhoto .stikersContainer .allStikersImages {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 2px solid #CFCFCF;
+  border-radius: 5px;
+  padding: 1rem .2rem;
+  left: 0;
+  right: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  bottom: 4.6rem;
+  z-index: 1;
+}
+.containerMakePhoto .stikersContainer:hover .allStikersImages {
+  display: block;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border: 2px solid #3897f0;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+}
+.containerMakePhoto .stikersContainer:hover .previewStikerImage {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-top: none !important;
+  margin-top: 2px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2) !important;
+  background-color: #a1c6a6 !important;
+  border-color: #3897f0 !important;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+  -webkit-transition-property: background-color, border-color, -webkit-box-shadow;
+  transition-property: background-color, border-color, -webkit-box-shadow;
+  transition-property: background-color, box-shadow, border-color;
+  transition-property: background-color, box-shadow, border-color, -webkit-box-shadow;
+  z-index: 2;
+}
